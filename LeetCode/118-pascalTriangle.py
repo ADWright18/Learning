@@ -22,6 +22,12 @@ class Solution:
         :type numRows: int
         :rtype: List[List[int]]
         """
+        class Solution:
+    def generate(self, numRows):
+        """
+        :type numRows: int
+        :rtype: List[List[int]]
+        """
         # Initialize list of n (numRows) lists
         pascal = [[0] * n for n in range(1, numRows + 1)]
 
@@ -35,15 +41,13 @@ class Solution:
                 pascal[i][0] = 1
                 pascal[i][1] = 1
 
-            # Rows > 2
+            # Rows > 3
             else:
                 pascal[i][0] = 1
                 pascal[i][i] = 1
 
                 # Fill in the values between 0 and i
-                for j in range(1, i - 1):
-                    print(pascal[i-1][j-1])
-                    print(pascal[i-1][j])
+                for j in range(1, i):
                     pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j]
 
         return pascal
