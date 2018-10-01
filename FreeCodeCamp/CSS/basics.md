@@ -225,3 +225,181 @@ to physical units of length (i.e., in and mm)
 (i.e., ```em``` is based on the size of an element's font)
 
 ## Style the HTML Body
+* You can style the HTML ```body``` element
+* Example:
+```css
+body {
+  background-color: black;
+}
+```
+
+## Inherit Styles from the Body Element
+* Remember, you can style your ```body``` element just like any other HTML element, and all your other elements will inherit ```body``` element's styles
+
+## Prioritize One Style Over Another
+* Sometimes your HTML elements will receive multiple styles that conflict with one another
+* Example:
+```css
+body {
+  background-color: black;
+  font-family: monospace;
+  color: green;
+}
+
+.pink-text {
+  color: pink;
+  }
+```
+
+## Override Styles in Subsequent CSS
+* Our "pink-text" class overrode our body element's CSS declaration!
+* Can we override our "pink-text" class?
+* Example:
+```css
+body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+}
+.pink-text {
+  color: pink;
+}
+.blue-text {
+  color: blue;
+}
+```
+* The order of the ```class``` declarations in the ```<style>``` section are what is important
+* The second declaration will always take precedence over the first
+
+## Override Class Declarations by Styling ID Attributes
+* You can use id attributes to override CSS declarations
+* Example:
+```css
+body {
+  background-color: black;
+  font-family: monospace;
+  color: green;
+}
+.pink-text {
+  color: pink;
+}
+.blue-text {
+  color: blue;
+}
+#orange-text {
+  color: orange;
+}
+```
+
+## Override Class Declarations with Inline Styles
+* You can also override CSS declarations with inline styles
+* Example:
+```html
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+```
+
+## Override All Other Styles by using Important
+* The most powerful method to override CSS - ```!important```
+* Example:
+```html
+<style>
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+```
+
+## Use Hex Code for Specific Colors
+* In CSS, we can use 6 hexadecimal digits to represent colors, two each for the red (R), green (G), and blue (B)
+* Example:
+```css
+body {
+  background-color: #000000;
+}
+```
+
+## Use RGB Values to Color Elements
+* Another way you can represent colors in CSS is by using ```RGB``` values
+* Example:
+```css
+body {
+  background-color: rgb(0, 0, 0);
+}
+```
+
+## Use CSS Variables to Change Several Elements at Once
+* CSS Variables are a powerful way to change many CSS properties at once by changing only one value
+* Example:
+```css
+.penguin {
+
+  /* change code below */
+  --penguin-skin: gray;
+  --penguin-belly: white;
+  --penguin-beak: orange;
+  /* change code above */
+
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 5%;
+  width: 300px;
+  height: 300px;
+}
+```
+
+## Attach a Fallback value to a CSS Variable
+* When using you variable as a CSS property value, you can attach a fallback value that your browser will revert to is the given variable is invalid
+* Example:
+```css
+.penguin-top {
+  top: 10%;
+  left: 25%;
+
+  /* change code below */
+  background: var(--pengiun-skin, black);
+  /* change code above */
+
+  width: 50%;
+  height: 45%;
+  border-radius: 70% 70% 60% 60%;
+}
+```
+
+## Cascading CSS Variables
+* When you create a variable, it becomes available for you to use inside the element in which you create it.
+* CSS variables are often defined in the :root element
+* Example:
+```css
+:root {  
+  /* add code below */
+  --penguin-belly:pink;
+  /* add code above */
+}
+```
+
+## Use a Media Query to Change a Variable
+* You can change the value of a variable at a media query break point
+* Example:
+```css
+@media (max-width: 350px) {
+    :root {
+      /* add code below */
+      --penguin-size: 200px;
+      --penguin-skin: black;
+      /* add code above */
+  }
+}
+```
