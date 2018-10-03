@@ -6,19 +6,23 @@ Basics and essentials for CSS from freeCodeCamp.
 * The property that is responsible for the color of an element's text is the ```color```
 style property
 * Example:
+
 ```html
 <h2 style="color: blue;">CatPhotoApp</h2>
 ```
 
 ## Use CSS Selectors to Style Elements
 * At the top of your code, create a ```style``` block like this:
+
 ```html
 <style>
 </style>
 ```
+
 * Inside the style block, you can create a ```CSS selector``` for all ```h2```
 elements
 * Example:
+
 ```html
 <style>
   h2 {color: red;}
@@ -28,6 +32,7 @@ elements
 ## Use a CSS Class to Style an Element
 * Classes are reusable styles that can be added to HTML elements
 * Example:
+
 ```html
 <style>
   .blue-text {
@@ -37,11 +42,13 @@ elements
 
 <h2 class="blue-text">CatPhotoApp</h2>
 ```
+
 * Classes allow you to use the same CSS styles on multiple HTML elements.
 
 ## Change the Font Size of an Element
 * Font size is controlled by the ```font-size``` CSS property
 * Example:
+
 ```css
 h1 {
   font-size: 30px;
@@ -51,6 +58,7 @@ h1 {
 ## Set the Font Family of an Element
 * You can set which font an element should use, by using the ```font-family``` property
 * Example:
+
 ```css
 h2 {
   font-family: sans-serif;
@@ -61,6 +69,7 @@ h2 {
 * To import a Google Font, you can copy the font(s) URL from the Google Fonts library
 and then paste it in your HTML.
 * Example:
+
 ```html
 <link href="https://fonts.googleapis.com/css?family-lobster" rel="stylesheet" type="text/css">
 ```
@@ -68,6 +77,7 @@ and then paste it in your HTML.
 ## Specify How Fonts Should Degrade
 * When one font isn't available, you can tell the browser to "degrade" to another font
 * Example:
+
 ```css
 p {
   font-family: Helvetica, sans-serif;
@@ -78,6 +88,7 @@ p {
 * CSS has a property called ```width``` that controls an element's width.
 * Just like fonts, we'll use ```px```(pixels) to specify the image's width.
 * Example:
+
 ```html
 <style>
   .large-image {
@@ -89,6 +100,7 @@ p {
 ## Add Borders Around Your Elements
 * CSS borders have properties like ```style```, ```color``` and ```width```
 * Example:
+
 ```html
 <style>
   .thin-red-border {
@@ -102,6 +114,7 @@ p {
 ## Add Rounded Corners with border-radius
 * You can specify a ```border-radius``` with pixels.
 * Example:
+
 ```css
 .thick-green-border {
   border-radius = 10px;
@@ -111,6 +124,7 @@ p {
 ## Make Circular Images with a border-radius
 * In addition to pixels, you can also specify the ```border-radius``` using a percentage
 * Example:
+
 ```css
 .thick-green-border {
   border-radius: 50%;
@@ -120,6 +134,7 @@ p {
 ## Give a Background Color to a div Element
 * You can set an element's background color with the ```background-color``` property
 * Example:
+
 ```css
 .green-background {
   background-color: green;
@@ -131,6 +146,7 @@ p {
 * There are several benefits to using ```id``` attributes: You can use an ```id```
 to style a single element and also modify it with JavaScript
 * Example:
+
 ```html
 <h2 id="cat-photo-app">
 ```
@@ -138,6 +154,7 @@ to style a single element and also modify it with JavaScript
 ## Use an id Attribute to Style an Element
 * You can use the ```id``` attribute to style elements with CSS
 * Example:
+
 ```css
 #cat-photo-element {
   background-color: green;
@@ -149,6 +166,7 @@ to style a single element and also modify it with JavaScript
 , ```margin```, and ```border```.
 * Refer to css-box-model.png for a visual representation of the CSS Box Model
 * Example:
+
 ```css
 .red-box {
   background-color: crimson;
@@ -170,6 +188,7 @@ larger
 * CSS allows you to control the ```padding``` of all four individual sides of an element
 with the ```padding-top```, ```padding-right```, ```padding-bottom```, and ```padding-left``` properties
 * Example:
+
 ```css
 .red-box {
   padding-top: 40px;
@@ -183,6 +202,7 @@ with the ```padding-top```, ```padding-right```, ```padding-bottom```, and ```pa
 * CSS also allows you to control the ```margin``` of all four individual sides of an element
 with the ```margin-top```, ```margin-right```, ```margin-bottom```, and ```margin-left``` properties
 * Example:
+
 ```css
 .blue-box {
   padding-top: 40px;
@@ -194,6 +214,7 @@ with the ```margin-top```, ```margin-right```, ```margin-bottom```, and ```margi
 ## Use Clockwise Notation to Specify the Padding of an Element
 * Instead of specifying an element's padding on each side individually, you can specify
 them all in one line, like this:
+
 ```css
 h1 {
   padding: 10px 20px 10px 20px;
@@ -203,6 +224,7 @@ h1 {
 ## Use Clockwise Notation to Specify the Margin of an Element
 * Refer to Clockwise Notation for Padding
 * Example:
+
 ```css
 h1 {
   margin: 10px 20px 10px 20px;
@@ -212,6 +234,7 @@ h1 {
 ## Use Attribute Selectors to Style Elements
 * There are other CSS Selectors you can use to select custom groups of elements to style
 * Example:
+
 ```css
 [type='radio'] {
   margin: 20px 0px 20px 0px;
@@ -227,6 +250,7 @@ to physical units of length (i.e., in and mm)
 ## Style the HTML Body
 * You can style the HTML ```body``` element
 * Example:
+
 ```css
 body {
   background-color: black;
@@ -239,6 +263,7 @@ body {
 ## Prioritize One Style Over Another
 * Sometimes your HTML elements will receive multiple styles that conflict with one another
 * Example:
+
 ```css
 body {
   background-color: black;
@@ -255,6 +280,7 @@ body {
 * Our "pink-text" class overrode our body element's CSS declaration!
 * Can we override our "pink-text" class?
 * Example:
+
 ```css
 body {
     background-color: black;
@@ -274,6 +300,7 @@ body {
 ## Override Class Declarations by Styling ID Attributes
 * You can use id attributes to override CSS declarations
 * Example:
+
 ```css
 body {
   background-color: black;
@@ -294,6 +321,7 @@ body {
 ## Override Class Declarations with Inline Styles
 * You can also override CSS declarations with inline styles
 * Example:
+
 ```html
 <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
 ```
@@ -301,6 +329,7 @@ body {
 ## Override All Other Styles by using Important
 * The most powerful method to override CSS - ```!important```
 * Example:
+
 ```html
 <style>
   body {
@@ -324,6 +353,7 @@ body {
 ## Use Hex Code for Specific Colors
 * In CSS, we can use 6 hexadecimal digits to represent colors, two each for the red (R), green (G), and blue (B)
 * Example:
+
 ```css
 body {
   background-color: #000000;
@@ -333,6 +363,7 @@ body {
 ## Use RGB Values to Color Elements
 * Another way you can represent colors in CSS is by using ```RGB``` values
 * Example:
+
 ```css
 body {
   background-color: rgb(0, 0, 0);
@@ -342,6 +373,7 @@ body {
 ## Use CSS Variables to Change Several Elements at Once
 * CSS Variables are a powerful way to change many CSS properties at once by changing only one value
 * Example:
+
 ```css
 .penguin {
 
@@ -363,6 +395,7 @@ body {
 ## Attach a Fallback value to a CSS Variable
 * When using you variable as a CSS property value, you can attach a fallback value that your browser will revert to is the given variable is invalid
 * Example:
+
 ```css
 .penguin-top {
   top: 10%;
@@ -382,6 +415,7 @@ body {
 * When you create a variable, it becomes available for you to use inside the element in which you create it.
 * CSS variables are often defined in the :root element
 * Example:
+
 ```css
 :root {  
   /* add code below */
@@ -393,6 +427,7 @@ body {
 ## Use a Media Query to Change a Variable
 * You can change the value of a variable at a media query break point
 * Example:
+
 ```css
 @media (max-width: 350px) {
     :root {
