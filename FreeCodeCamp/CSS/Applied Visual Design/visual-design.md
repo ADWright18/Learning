@@ -243,4 +243,147 @@ a:hover {
 }
 ```
 
-##
+## Change an Element's Relative Position
+* CSS treats each HTML element as its own box, which is usually referred to as
+the ```CSS Box Model```.
+* Block-level items automatically start on a new line.
+* When the position of an element is set to ```relative```, it allows you to
+specify how CSS should move it relative to its current position in the normal
+flow of the page.
+* Example:
+
+```css
+p {
+  position: relative;
+  bottom: 10px;
+}
+```
+
+## Move a Relatively Positioned Element with CSS Offsets
+* The CSS offsets of ```top``` or ```bottom```, and ```left``` or ```right``` tell
+the browser how far to offset an item relative to where is would sit in the
+normal flow of the document
+* Example:
+
+```css
+h2 {
+  position: relative;
+  left: 15px;
+  bottom: 10px;
+}
+```
+
+## Lock an Element to its Parent with Absolute Positioning
+* The next option for the CSS ```position``` property is ```absolute```, which
+locks the element in place relative to its parent container.
+* Unlike the ```relative``` position, this removes the element from the normal
+flow of the document, so surrounding items ignore it.
+* Example:
+
+```css
+#searchbar {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+```
+
+## Lock an Element to the Browser Window with Fixed Positioning
+* The next layout scheme that CSS offers is the ```fixed``` position, which is a
+type of absolute positioning that locks an element relative to the browser window.
+* Example:
+
+```css
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #767676;
+}
+```
+
+## Push Elements Left or Right with the float Property
+* The next positioning tool does not actually use ```position```, but sets the
+float property of an element.
+* Floating elements are removed from the normal flow of a document and pushed to
+either the ```left``` or ```right``` of their containing parent element.
+* It's commonly used with the ```width``` property to specify how much Horizontal
+space the floated element requires
+* Example:
+
+```css
+#left {
+  float: left;
+  width: 50%;
+}
+#right {
+  float: right;
+  width: 40%;
+}
+```
+
+## Change the Position of Overlapping Elements with the z-index Property
+* The ```z-index``` property can specify the order of how elements are stacked on
+top of one another
+* Example:
+
+```css
+.first {
+  background-color: red;
+  position: absolute;
+  z-index: 2  
+}
+.second {
+  background-color: blue;
+  position: absolute;
+  left: 40px;
+  top: 50px;
+  z-index: 1;
+}
+```
+
+## Center an Element Horizontally Using the margin Property
+* Another positioning technique is to center a block element horizontally. One
+way to do this is to set its ```margin``` to a value of auto
+* Example:
+
+```css
+div {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+```
+
+## Learn about Complementary Colors
+* The color wheel is a useful tool to visualize how colors relate to each other
+
+## Learn about Tertiary Colors
+* Refer back to this section
+
+## Adjust the Color of Various Elements to Complimentary Colors
+* Example:
+
+```css
+body {
+  background-color: #FF790E;
+}
+header {
+  background-color: #09A7A1;
+  color: white;
+  padding: 0.25em;
+}
+h2 {
+  color: #09A7A1;
+}  
+button {
+  background-color: #FF790E;
+}
+footer {
+  background-color: #09A7A1;
+  color: white;
+  padding: 0.5em;
+}
+```
