@@ -14,4 +14,22 @@ Problem Description:
 
 Example
 Input:
+5
+2 3 6 6 5
+
+Output:
+5
 """
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+    max_value = 0
+
+    max_value = max(arr)
+
+    for i in arr:
+        if (i == max_value):
+            arr.remove(i)
+
+    print(max(arr))
