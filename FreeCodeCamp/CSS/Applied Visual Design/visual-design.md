@@ -418,3 +418,5 @@ nav {
   background-color: hsl(180, 80%, 25%)
 }
 ```
+
+# Create a Gradual CSS Linear Gradient
