@@ -387,3 +387,34 @@ footer {
   padding: 0.5em;
 }
 ```
+
+# Adjust the Hue of a Color
+* Colors have several characteristics including hue, saturation, and lightness.
+* CSS3 introduced the ```hsl()``` property as an alternative way to pick a color
+by directly stating these characteristics
+* Hue is the "color"
+* Saturation is the amount of gray in a color
+* Lightness is the amount of white or black in a color
+* Example:
+
+```css
+.green {
+  background-color: hsl(120, 100%, 50%);
+}
+```
+
+# Adjust the Tone of a Color
+* The ```hsl()``` option in CSS also makes it easy to adjust the tone of a color
+* Mixing white with a pure hue creates a tint of that color, and adding black
+will make a shade
+* Example:
+
+```css
+header {
+  background-color: hsl(180, 90%, 35%);
+  color: #FFFFFF;
+}
+nav {
+  background-color: hsl(180, 80%, 25%)
+}
+```

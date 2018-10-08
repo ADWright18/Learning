@@ -24,12 +24,10 @@ if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
 
-    max_value = 0
+    nums = list(arr)
+    max_value = max(nums)
 
-    max_value = max(arr)
+    while (max_value in nums):
+        nums.remove(max_value)
 
-    for i in arr:
-        if (i == max_value):
-            arr.remove(i)
-
-    print(max(arr))
+    print(max(nums))
