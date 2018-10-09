@@ -388,7 +388,7 @@ footer {
 }
 ```
 
-# Adjust the Hue of a Color
+## Adjust the Hue of a Color
 * Colors have several characteristics including hue, saturation, and lightness.
 * CSS3 introduced the ```hsl()``` property as an alternative way to pick a color
 by directly stating these characteristics
@@ -403,7 +403,7 @@ by directly stating these characteristics
 }
 ```
 
-# Adjust the Tone of a Color
+## Adjust the Tone of a Color
 * The ```hsl()``` option in CSS also makes it easy to adjust the tone of a color
 * Mixing white with a pure hue creates a tint of that color, and adding black
 will make a shade
@@ -419,4 +419,432 @@ nav {
 }
 ```
 
-# Create a Gradual CSS Linear Gradient
+## Create a Gradual CSS Linear Gradient
+* Applying a color on HTML elements is not limited to one flat hue.
+* CSS provides the ability to use color transitions, otherwise known as gradients,
+on elements
+* Syntax:
+
+```css
+p {
+  background: linear-gradient(gradient_direction, color 1, color 2, ...);
+}
+```
+
+* Example:
+
+```css
+div{
+  border-radius: 20px;
+  width: 70%;
+  height: 400px;
+  margin: 50px auto;
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+}
+```
+
+## Use a CSS Linear Gradient to Create a Striped Element
+* The ```repeating-linear-gradient()``` function is very similar to  ```linear-gradient```
+with the major difference that it repeats the specified gradient pattern.
+* Example:
+
+```css
+div{
+  border-radius: 20px;
+  width: 70%;
+  height: 400px;
+  margin:  50 auto;
+  background: repeating-linear-gradient(
+    45deg,
+    yellow 0px,
+    yellow 40px,
+    black 40px,
+    black 80px
+  );
+}
+```
+
+## Create Texture by Adding a Subtle Pattern as a Background Image
+* One way to add texture and interest to a background and have it stand out more
+is to add a subtle pattern.
+* The ```background``` property supports the ```url()``` function in order to
+link to an image of the chosen texture or pattern
+* Example:
+
+```css
+body {
+  background: url(https://i.imgur.com/MJAkxbh.png)
+}
+```
+
+## Use the CSS Transform scale Property to Change the Size of an Element
+* To change the scale of an element, CSS has the ```transform``` property, along
+with its ```scale()``` function.
+* Example:
+
+```css
+p {
+  transform:scale(2);
+}
+```
+
+## Use the CSS Transform scale Property to Scale an Element on Hover
+* The ```transform``` property has a variety of functions that lets you scale,
+move, rotate, skew, etc., your elements.
+* When used with pseudo-classes such as ```:hover``` that specify a certain
+state of an element, the ```transform``` property can easily add interactivity
+to your elements
+* Example:
+
+```css
+p:hover {
+  transform: scale(2.1)
+}
+```
+
+## Use the CSS Transform Property skewX to Skew an Element Along the X-Axis
+* The next function of the ```transform``` property is ```skewX()```, which skews the selected element along its X (horizontal) axis by a given degree
+* Example:
+
+```css
+p {
+  transform: skewX(-32deg)
+}
+```
+
+## Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis
+* Given that the ```skewX()``` function skews the selected element along the
+X-axis by a given degree, it is no suprise that the ```skewY()``` property skews
+an element along the Y (vertical) axis
+* Example:
+
+```css
+#top {
+  background-color: red;
+  transform: skewY(-10deg);
+}
+```
+
+## Create a Graphic Using CSS
+* Example: (Crescent Moon)
+
+```css
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0 0 blue;
+}
+```
+
+## Create a More Complex Shape Using CSS and HTML
+* Example: (Heart)
+
+```html
+<style>
+.heart {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+}
+.heart::after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+.heart::before {
+  content: "";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+</style>
+<div class = "heart"></div>
+```
+
+## Learn How the CSS @keyframes and animation Properties Work
+* To animate an element, you need to know about the animation properties and the ```@keyframes``` rule.
+* The animation properties control how the animation should behave and the ```@keyframe```
+rule controls what happens during the animation.
+* ```animation-name``` sets the name of the animation, which is later used by ```@keyframes```
+* ```animation-duration``` sets the length of time for the animation
+* ```@keyframes``` is how to specify exactly what happens within the animation
+over the duration
+* Example:
+
+```css
+#anim {
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+@keyframes colorful {
+  0 % {
+    background-color: blue;
+  }
+  100 % {
+    background-color: yellow;
+  }
+}
+```
+
+* For the element with the ```anim``` id, the code snippet above sets the ```animation-name``` to ```colorful``` and set the ```animation-duration``` to 3
+seconds
+* Then the ```@keyframes``` rule links to the animation properties with the name ```colorful```
+
+## Use CSS Animation to change the Hover State of a Button
+* You can use CSS ```@keyframes``` to change the color of a button in its hover
+state.
+* Here's an example of changing the width of an image on hover
+
+```html
+<style>
+  img:hover {
+    animation-name: width;
+    animation-duration: 500ms;
+  }
+
+  @keyframes width {
+    100% {
+      width: 40px;
+    }
+  }
+</style>
+<img src="https://bit.ly/smallgooglelogo" alt="Google's Logo" />
+```
+
+## Modify Fill Mode of an Animation
+* That's great, but it doesn't work right yet. Notice how the animation resets
+after ```500ms``` has passed, causing the button to revert back to the original
+color. You want the button to stay highlighted
+* This can be done by setting the ```animation-fill-mode``` property to ```forwards```
+* The ```animation-fill-mode``` specifies the style applied to an element when
+the animation has finished
+* Example:
+
+```css
+button:hover {
+  animation-name: background-color;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards; /* IMPORTANT */
+}
+@keyframes background-color {
+  100% {
+    background-color: #4791d0;
+  }
+}
+```
+
+## Create Movement Using CSS Animation
+* When elements have a specified ```position```, such as ```fixed``` or ```relative```,
+the CSS offset properties ```right```, ```left```, ```top```, and ```bottom```
+can be used in animation rules to create movement
+* As shown in the example below, you can push the item downwards then upwards by
+setting the ```top``` property of the ```50%``` keyframe to 50px
+
+```css
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+  }
+}
+```
+
+## Create Visual Direction by Fading an Element from Left to Right
+* For this challenge, you'll change the ```opacity``` of an animated element so
+it gradually fades as it reaches the right side of the screen
+* Example:
+
+```css
+@keyframes fade {
+  50% {
+    left: 60%;
+    opacity: 0.1;
+  }
+}
+```
+
+## Animate Elements Continually Using an Infinite Animation Count
+* Another animation property is the ```animation-iteration-count```, which allows
+you to control how many times you would like to loop through the animation
+* Example:
+
+```css
+#ball {
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(
+    35deg,
+    #ccffff,
+    #ffcccc
+  );
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce{
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 249px;
+    width: 130px;
+    height: 70px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+```
+
+# Make a CSS Heartbeat using an Infinite Animation Count
+* Here's one more continuous animation example with the ```animation-iteration-count```
+property that uses the heart you designed in a previous challenge
+
+```html
+<style>
+  .back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .heart:after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+
+</style>
+<div class="back"></div>
+<div class="heart"></div>
+```
+
+## Animate Elements at Variable Rates
+* There are a variety of ways to alter the animation rates of similarly animated
+elements.
+* So far, this has been achieved by applying an ```animation-iteration-count```
+property and setting ```@keyframes``` rules.
+* Example:
+
+```css
+@keyframes twinkle-1 {
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes twinkle-2 {
+  20% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+```
+
+## Change Animation Timing with Keywords
+* In CSS animations, the ```animation-timing-function``` property controls how
+quickly an animated element changes over the duration of the animation
+* There are a number of predefined keywords available for popular options ```ease```, ```ease-out```, ```ease-in```, and ```linear```
+* Example:
+
+```css
+#ball1 {
+  left:27%;
+  animation-timing-function: linear;
+}
+#ball2 {
+  left:56%;
+  animation-timing-function: ease-out;
+}
+```
