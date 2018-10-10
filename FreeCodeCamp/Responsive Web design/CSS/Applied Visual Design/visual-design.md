@@ -848,3 +848,18 @@ quickly an animated element changes over the duration of the animation
   animation-timing-function: ease-out;
 }
 ```
+
+## Learn How Bezier Curves Work
+* In CSS Animations, Bezier curves are used with the ```cubic-bezier``` function.
+* The shape of the curve represents how the animation plays out. The curve lives
+on a 1 by 1 coordinate system. The X-axis of this oordinate system is the duration
+of the animation (think of it as a time scale), and the Y-axis is the change
+in the animation
+* Example:
+
+```css
+#ball1 {
+  left: 27%;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+```
