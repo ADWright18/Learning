@@ -17,13 +17,27 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        # Initialize right and left
-        current = 0
-        mid = x // 2
+        # Base case
+        if (x == 0 or x == 1):
+            return x
 
-        # Try i*i and incremement until i*i is greater than or equal to x
-        for i in range(mid):
-            if (i*i <= x):
-                current = i
-            else:
-                return current
+        # Store the res if m*m < x
+        res = 0
+
+        # Initialize right and left
+        r = x
+        l = 0
+
+        # Binary Search
+        while (l <= r):
+            m = (l + r) // 2
+
+            if (m*m == x):
+                return m
+            elif (m*m < x):
+                l = m + 1
+                res = m
+            elif (m*m > x):
+                r = m - 1
+
+        return res
