@@ -64,3 +64,51 @@ def search(self, nums, target):
   * Termination: ```left > right```
   * Searching Left: ```right = mid - 1```
   * Searching Right: ```left = mid + 1```
+
+* Template 2:
+
+```python
+def binarySearch(nums, target):
+  """
+  :type nums: List[int]
+  :type target: int
+  :rtype: int
+  """
+  if (len(nums) == 0):
+    return -1
+
+  left = 0
+  right = len(nums)
+
+  while (left < right):
+    mid = (left + right) // 2
+
+    if (nums[mid] == target):
+      return mid
+    elif (nums[mid] < target):
+      left = mid + 1
+    else:
+      right = mid
+
+    # Post-processing
+    # End Condition: left == right
+    if (left != len(nums) and nums[left] == target):
+      return left
+
+    return -1
+```
+
+* Key Attributes:
+  * An advanced way to implement binary search
+  * Search conditions needs to access element's immediate right neighbor
+  * Use element's right neighbor to determine if condition is met and decide
+  whether to go left or right
+  * Guarantees Search Space is at least 2 in size of each step
+  * Post-processing required. Loop/Recursion ends when you have 1 element left.
+  Need to assess if the remaining element meets the condition
+
+* Distinguishing Syntax
+  * Initial condition: ```left = 0, right = length```
+  * Termination: ```left == right```
+  * Searching Left: ```right = mid```
+  * Searching Right: ```left = mid + 1```
