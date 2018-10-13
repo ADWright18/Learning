@@ -19,3 +19,47 @@ meaning of the message
 ```
 
 ## Know When Alt Text Should be Left Blank
+* Sometimes images are grouped with a caption already describing them, or are
+used for decoration only. In these cases ```alt``` text may seem redundant or
+unnecessary
+* In situations when an image is already explained with text content, or does
+not add meaning to a page, the ```img``` still needs an ```alt``` attribute, but
+it can be set to an empty string
+* Example:
+
+```html
+<img src="visualDecoration.jpeg" alt="">
+```
+
+## Use Headings to Show Hierarchical Relationships of Content
+* Headings with equal (or higher) rank start new implied sections, headings with
+lower rank start subsections of the previous one
+* Example:
+
+```html
+<h1>How to Become a Ninja</h1>
+<main>
+  <h2>Learn the Art of Moving Stealthily</h2>
+  <h3>How to Hide in Plain Sight</h3>
+  <h3>How to Climb a Wall</h3>
+
+  <h2>Learn the Art of Battle</h2>
+  <h3>How to Strengthen your Body</h3>
+  <h3>How to Fight like a Ninja</h3>
+
+  <h2>Learn the Art of Living with Honor</h2>
+  <h3>How to Breathe Properly</h3>
+  <h3>How to Simplify your Life</h3>
+</main>
+```
+
+## Jump Straight to the Content Using the main Element
+* The ```main``` element is used to wrap the main content, and there should only
+be one per page
+* The ```main``` tag also has an embedded landmark feature that assistive
+technology can use to quickly navigate to the main content.
+* Example:
+
+```html
+
+```
