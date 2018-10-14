@@ -61,5 +61,39 @@ technology can use to quickly navigate to the main content.
 * Example:
 
 ```html
+<header>
+  <h1>Weapons of the Ninja</h1>
+</header>
+<main>
+
+</main>
+<footer></footer>
+```
+
+## Wrap Content in the article Element
+* ```article``` is another one of the new HTML5 elements that adds semantic meaning to your markup.
+* ```article``` is a sectioning element, and is used to wrap independent, self-contained content.
+* Reference:
 
 ```
+<div> - groups content
+<section> - groups related content
+<article> - group independent, self-contained content
+```
+
+## Make Screen Reader Navigation Easier with the header Landmark
+* The ```header``` tag is used to wrap introductory information or navigation links for its parent tag
+* ```header``` shares the embedded landmark feature you saw with ```main```, allowing assistive technologies to quickly navigate to that content
+* Note: ```header``` is meant for use in the ```body``` tag of your HTML document
+* Example:
+
+```html
+<body>
+  <header>
+    <h1>Training with Camper Cat</h1>
+  </header>
+</body>
+```
+
+## Make Screen Reader Navigation Easier with the nav Landmark
+* The ```nav``` element is meant to wrap around the main navigation links in your page
