@@ -20,18 +20,18 @@ class Solution(object):
         """
         # Initialize right and left
         l = 0
-        r = len(nums)
+        r = len(nums) - 1
 
         # Binary Search
         while (l < r):
             m = (l + r) // 2
 
-            if (nums[m] > nums[m-1] and nums[m] > nums[m+1]):
-                return m
-            elif (nums[m] < nums[m-1]):
-                r = m
-            elif (nums[m] < nums[m+1]):
+            if (nums[m] < nums[m+1]):
                 l = m + 1
+            elif (nums[m] > nums[m+1]):
+                r = m
+
+        return l
 
         if (l != len(nums)):
             if (nums[m] > nums[m-1] and nums[m] > nums[m+1]):
