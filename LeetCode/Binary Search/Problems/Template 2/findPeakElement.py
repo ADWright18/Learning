@@ -32,8 +32,3 @@ class Solution(object):
                 r = m
 
         return l
-
-        if (l != len(nums)):
-            if (nums[m] > nums[m-1] and nums[m] > nums[m+1]):
-                return m
-        return -1
