@@ -19,10 +19,13 @@ function. To insert a key and value, we do the following:
   * Search through the linked list for the value with this key
 
 
-* If the number of collisions is very high, the worst case runtime is O(N), where N is the number of keys
+* If the number of collisions is very high, the worst case runtime is O(N),
+where N is the number of keys
 
-* However, we generally assume a good implementation that keeps collisions to a minimum, in which case the lookup time is O(1)
+* However, we generally assume a good implementation that keeps collisions to a
+minimum, in which case the lookup time is O(1)
 
 * Alternatively, we can implement the hash table with a balanced binary search tree.
   * This gives us an O(log N) lookup time.
-  * The advantage of the is potentially using less space, since we no longer allocate a large array
+  * The advantage of the is potentially using less space, since we no longer
+  allocate a large array
