@@ -6,6 +6,21 @@
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Wrapper */
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 960px;
+
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 /* Body and HTML */
 html {
   box-sizing: border-box;
@@ -15,15 +30,14 @@ html {
 
 body {
   background: var(--primary);
-  margin: 0x;
+  margin: 0;
   line-height: 1.4;
 }
 
 header {
   padding: 25px;
-  text-align: center;
-  background: var(--light);
-  color: white;
+  text-align: left;
+  background: white;
   box-shadow: var(--shadow);
 }
 
@@ -51,14 +65,21 @@ header {
 
 /* Main Content */
 .main-content {
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--dark);
-  color: var(--dark) !important;
-  margin: 5px;
-  padding: 250px;
+  padding: 5px;
+  text-align: left;
+  background-color: white;
+}
+
+.post {
+  padding: 10px;
+  border-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+footer {
+  background-color: var(--dark);
+  display: block;
   text-align: center;
-  background: white;
   color: white;
-  box-shadow: var(--shadow);
 }
