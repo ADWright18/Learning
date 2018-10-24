@@ -96,4 +96,46 @@ technology can use to quickly navigate to the main content.
 ```
 
 ## Make Screen Reader Navigation Easier with the nav Landmark
-* The ```nav``` element is meant to wrap around the main navigation links in your page
+* The ```nav``` element is meant to wrap around the main navigation links in
+your page
+* Example
+
+```html
+<nav>
+  <ul>
+    <li><a href="#stealth">Stealth &amp; Agility</a></li>
+    <li><a href="#combat">Combat</a></li>
+    <li><a href="#weapons">Weapons</a></li>
+  </ul>
+</nav>
+```
+
+## Make Screen Reader Navigation Easier with the footer Landmark
+* Similar to ```header``` and ```nav```, the ```footer``` element has a built-in
+landmark feature that allows assistive devices to quickly navigate to it.
+* It's primarily used to contain copyright information or links to related
+documents that usually sit at the bottom of the page
+* Example:
+
+```html
+<body>
+  <footer> &copy; 2018 Camper Cat </footer>
+</body>
+```
+
+## Improve Accessibility of Audio Content with the audio Element
+* HTML5's ```audio``` element gives semantic meaning when it wraps sound or
+audio stream content in your markup.
+* Audio content also needs a text alternative to be accessible to people who are
+deaf or hard of hearing
+* The ```audio``` tag supports the ```controls``` attribute. This shows the
+browser default play, pause, and other controls, and support keyboard
+functionality
+* Example:
+
+```html
+<audio id="meowClip" controls>
+  <source src="audio/meow.mp3" type="audio/mpeg" />
+  <source src="audio/meow.ogg" type="audio/ogg" />
+</audio>
+```
