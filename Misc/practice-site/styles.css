@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-  --primary: #DEFFFF;
+  --primary: #D3D3D3;
   --dark: #333;
   --light: #FFA500;
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
@@ -72,6 +72,7 @@ header {
 
 .post {
   padding: 10px;
+  border-radius: 5px;
   border-width: 1px;
   border-top-style: solid;
   border-bottom-style: solid;
@@ -79,7 +80,6 @@ header {
 
 footer {
   background-color: var(--dark);
-  display: block;
   text-align: center;
   color: white;
 }
