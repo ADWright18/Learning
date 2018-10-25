@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-/* Wrapper */
+/* Wrapper (Main Content) */
 .wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -23,22 +23,25 @@
 
 /* Body and HTML */
 html {
+  height: 100%;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--dark);
 }
 
 body {
+  position: relative;
+  padding-bottom: 6rem;
   background: var(--primary);
   margin: 0;
-  line-height: 1.4;
+  min-height: 100%;
 }
 
 header {
   padding: 25px;
   text-align: left;
   background: white;
-  box-shadow: var(--shadow);
+  opacity: 0.8;
 }
 
 /* Navbar */
@@ -47,6 +50,7 @@ header {
   background-color: var(--dark);
   position: sticky;
   top: 0;
+  box-shadow: var(--shadow);
 }
 
 .navbar a {
@@ -67,19 +71,26 @@ header {
 .main-content {
   padding: 5px;
   text-align: left;
-  background-color: white;
 }
 
+/* Post */
 .post {
   padding: 10px;
+  margin: 5px;
   border-radius: 5px;
-  border-width: 1px;
-  border-top-style: solid;
-  border-bottom-style: solid;
+  border-width: 2px;
+  border-style: solid;
+  background-color: white;
+  box-shadow: var(--shadow);
 }
 
+/* Footer */
 footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background-color: var(--dark);
-  text-align: center;
   color: white;
+  text-align: center;
 }
