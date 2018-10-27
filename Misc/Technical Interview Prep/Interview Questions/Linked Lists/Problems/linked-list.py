@@ -76,13 +76,39 @@ class LinkedList:
 
         return n.data
 
+    def deleteMiddleNode(self):
+        # Two pointers
+        # counter - get the length of list
+        # n - delete the middle element
+        counter = self.head
+        n = self.head
+        count = 0
+        mid = 0
+
+        # Iterate through the list to get length
+        while (counter is not None):
+            count += 1
+            counter = counter.next
+
+        # Check if the list contains at least > 2 elements
+        if (count > 2):
+            # Get the middle node (ceiling of count / 2)
+            mid = -(-count // 2)
+            while (count != mid + 1):
+                count -= 1
+                n = n.next
+            n.next = n.next.next
+        else:
+            print("List needs to contain at least 3 elements: ")
+
 
 # Main Program
 a = Node(20)
 d = LinkedList(a)
-d.append(6)
-d.append(9)
 d.append(9)
 d.append(6)
+d.append(7)
+d.append(9)
 print(d)
-print(d.returnKthToLast(1))
+d.deleteMiddleNode()
+print(d)
