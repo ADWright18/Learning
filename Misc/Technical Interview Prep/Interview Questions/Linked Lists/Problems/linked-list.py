@@ -101,6 +101,26 @@ class LinkedList:
         else:
             print("List needs to contain at least 3 elements: ")
 
+    def partition(self, k):
+        # Not finished*
+        # Two pointers
+        # swap - starts at the end of the list
+        # n - starts at the beginning of the list
+        swap = self.head
+        n = self.head
+
+        # Move swap to the end
+        while (swap.next != None):
+            swap = swap.next
+
+        # Iterate through the list
+        while (n != None):
+            if (n.data < k):
+                n = n.next
+            elif (n.data >= k):
+                n.data, swap.data = swap.data, n.data
+                n = n.next
+                swap = swap.prev
 
 # Main Program
 a = Node(20)
@@ -110,5 +130,5 @@ d.append(6)
 d.append(7)
 d.append(9)
 print(d)
-d.deleteMiddleNode()
+d.partition(20)
 print(d)
