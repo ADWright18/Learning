@@ -15,14 +15,33 @@ class LinkedList:
 
     def __str__(self):
         n = self.head
-        s = "start"
+        s = ""
 
         while (n != None):
+            # Check if n is the head
+            if (n.prev == None):
+                s = s + str(n.data)
+                n = n.next
+                continue
+
             s = s + " -> " + str(n.data)
             n = n.next
         return s
 
     def append(self, value):
+        """
+        Append a value to the linked list
+
+        This function creates a new node with the new value and
+        sets it as the "next node" of the tail of the list
+
+        Parameters
+        ----------
+        value : int
+            value to append to the list
+
+        Examples:
+        """
         n = self.head
 
         # Travel to the end of the linked list
@@ -39,6 +58,15 @@ class LinkedList:
 
 
     def removeDuplicates(self):
+        """
+        Remove duplicates from the list
+
+        This function removes all duplicated from the
+        linked list by storing each unique value in a
+        buffer and checking the buffer on each node.
+
+        Examples:
+        """
         # Store seen values
         buffer = []
         n = self.head
@@ -103,12 +131,12 @@ class LinkedList:
 
 
 # Main Program
-a = Node(20)
-d = LinkedList(a)
-d.append(9)
-d.append(6)
-d.append(7)
-d.append(9)
-print(d)
-d.deleteMiddleNode()
-print(d)
+# a = Node(20)
+# d = LinkedList(a)
+# d.append(9)
+# d.append(6)
+# d.append(7)
+# d.append(9)
+# print(d)
+# d.deleteMiddleNode()
+# print(d)
