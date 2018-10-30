@@ -1,0 +1,16 @@
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=(((categories.href!=%22/public/.bedework/categories/Competitions%20and%20Tournaments%22)%20or%20(categories.href!=%22/public/.bedework/categories/Charitable%20and%20Volunteering%22)%20or%20(categories.href!=%22/public/.bedework/categories/Conferences%2C%20Meetings%20and%20Seminars%22)%20or%20(categories.href!=%22/public/.bedework/categories/Exhibitions%22)%20or%20(categories.href!=%22/public/.bedework/categories/Festivals%22))%20and%20(categories.href=%22/public/.bedework/categories/.yuag%22))&skinName=list-json&count=240
+
+Charitable & Volunteering:
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/Charitable%20and%20Volunteering%22)%20)%20&skinName=list-json&count=240
+
+Competitions & Tournaments
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/Competitions%20and%20Tournaments%22)%20)%20&skinName=list-json&count=240
+
+Conferences, Meetings & Seminars
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/Conferences%2C%20Meetings%20and%20Seminars%22)%20)%20&skinName=list-json&count=240
+
+Exhibitions:
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href=%22/public/.bedework/categories/Exhibitions%22)%20)%20&skinName=list-json&count=240
+
+Festivals:
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/Festivals%22)%20)%20&skinName=list-json&count=240

@@ -1,7 +1,3 @@
-"""
-Problem Description:
-    Write code to remove duplicates from an unsorted linked list.
-"""
 class Node:
     """
     Represents a linked list node
@@ -23,14 +19,32 @@ class Node:
         self.next = None
         self.prev = None
 
-class LinkedList:
+    def __str__(self):
+        return str(self.data)
 
-    def __init__(self, node):
+class LinkedList:
+    """
+    Represents a linked list
+
+    This class provides method and properties for managing
+    the current linked list instance.
+
+    Attributes
+    ----------
+    head : Node
+        beginning of the list
+    """
+
+    def __init__(self, node=None):
         self.head = node
 
     def __str__(self):
         n = self.head
         s = ""
+
+        # Check if the list is empty
+        if (self.head == None):
+            return s
 
         while (n != None):
             # Check if n is the head
@@ -45,31 +59,51 @@ class LinkedList:
 
     def append(self, value):
         """
-        Append a value to the linked list
+        Append one or many values to the linked list
 
         This function creates a new node with the new value and
-        sets it as the "next node" of the tail of the list
+        sets it as the "next node" of the tail of the list. If
+        a list is given as the input, it appends the values
+        sequentially into the linke list
 
         Parameters
         ----------
-        value : int
-            value to append to the list
+        value : int | List[int]
+            value(s) to append to the list
 
         Examples:
         """
         n = self.head
+        previous = None
 
         # Travel to the end of the linked list
-        previous = None
-        while (n.next != None):
-            previous = n
-            n = n.next
+        if (n != None):
+            while (n.next != None):
+                previous = n
+                n = n.next
 
-        n.next = Node(value)
+        # Check if "value" is an int or List[int]
+        if (isinstance(value, list)):
+            for val in value:
 
-        # Add the prev value
-        previous, n = n, n.next
-        n.prev = previous
+                # Check if the head is null
+                if (n == None):
+                    self.head = Node(val)
+                    n = self.head
+
+                else:
+                    n.next = Node(val)
+                    previous, n = n, n.next
+                    n.prev = previous
+
+        elif (isinstance(value, int)):
+            if (n == None):
+                self.head = Node(value)
+            else:
+                n.next = Node(value)
+                previous, n = n, n.next
+                n.prev = previous
+
 
 
     def removeDuplicates(self):
@@ -164,14 +198,3 @@ class LinkedList:
                 n.data, swap.data = swap.data, n.data
                 n = n.next
                 swap = swap.prev
-
-# Main Program
-a = Node(20)
-d = LinkedList(a)
-d.append(9)
-d.append(6)
-d.append(7)
-d.append(9)
-print(d)
-d.partition(20)
-print(d)
