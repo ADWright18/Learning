@@ -3,6 +3,21 @@ Problem Description:
     Write code to remove duplicates from an unsorted linked list.
 """
 class Node:
+    """
+    Represents a linked list node
+
+    This class provides method and properties for managing
+    the current node instance.
+
+    Attributes
+    ----------
+    data : int
+        value contained inside a node
+    next : Node
+        reference to the next node in the list
+    prev : Node
+        reference to the previous node in the list
+    """
     def __init__(self, val):
         self.data = val
         self.next = None
@@ -151,7 +166,6 @@ class LinkedList:
                 swap = swap.prev
 
 # Main Program
-<<<<<<< HEAD:Misc/Technical Interview Prep/Interview Questions/Linked Lists/Problems/linked-list.py
 a = Node(20)
 d = LinkedList(a)
 d.append(9)
@@ -161,14 +175,3 @@ d.append(9)
 print(d)
 d.partition(20)
 print(d)
-=======
-# a = Node(20)
-# d = LinkedList(a)
-# d.append(9)
-# d.append(6)
-# d.append(7)
-# d.append(9)
-# print(d)
-# d.deleteMiddleNode()
-# print(d)
->>>>>>> 5f99b6406139e0a6d32ff14aee3de576e4165d78:Misc/Technical Interview Prep/Interview Questions/Linked Lists/Problems/linkedlist.py
