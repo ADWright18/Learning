@@ -72,11 +72,10 @@ def test_list_attributes():
 
     assert reverse_temp == [4,3,2,1,0]
 
-def test_list_methods():
-    a = Node(3)
 
-    linked_list = LinkedList(a)
-    linked_list.append([3,4,5,2,4])
+def test_list_methods():
+    linked_list = LinkedList()
+    linked_list.append([3,3,4,5,2,4])
 
     # Test removeDuplicates()
     linked_list.removeDuplicates()
@@ -105,8 +104,7 @@ def test_list_methods():
     assert reverse_temp == [2,5,4,3]
 
     # Test returnKthToLast()
-    a = Node(7)
-    linked_list = LinkedList(a)
+    linked_list = LinkedList()
     linked_list.append([3,8,5,9,4])
 
     k = 2

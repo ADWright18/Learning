@@ -27,7 +27,7 @@ class Node:
 
 class LinkedList:
     """
-    Represents a doubly linked list
+    Represents a linked list
 
     This class provides method and properties for managing
     the current linked list instance.
@@ -67,7 +67,7 @@ class LinkedList:
         This function creates a new node with the new value and
         sets it as the "next node" of the tail of the list. If
         a list is given as the input, it appends the values
-        sequentially into the linked list
+        sequentially into the linke list
 
         Parameters
         ----------
@@ -75,13 +75,6 @@ class LinkedList:
             value(s) to append to the list
 
         Examples:
-        >>> a = LinkedList()
-        >>> a.append(0)
-        >>> print(a)
-        0
-        >>> a.append([1,2,3])
-        >>> print(a)
-        0 -> 1 -> 2 -> 3
         """
         n = self.head
         previous = None
@@ -122,17 +115,9 @@ class LinkedList:
 
         This function removes all duplicated from the
         linked list by storing each unique value in a
-        buffer and checking if the value of the node is
-        in the buffer.
+        buffer and checking the buffer on each node.
 
         Examples:
-        >>> a = LinkedList()
-        >>> a.append([7,4,6,4,8,6])
-        >>> print(a)
-        7 -> 4 -> 6 -> 4 -> 8 -> 6
-        >>> a.removeDuplicates()
-        >>> print(a)
-        7 -> 4 -> 6 -> 8
         """
         # Store seen values
         buffer = []
@@ -143,12 +128,9 @@ class LinkedList:
 
         # Iterate through the linked list
         while (n is not None):
-
             if (n.data in buffer):
-                # Change next reference for previous node
                 previous.next = n.next
 
-                # Change prev reference of n.next to previous
                 if (previous.next != None):
                     previous.next.prev = previous
 
@@ -172,14 +154,11 @@ class LinkedList:
             counter = counter.next
 
         # Find the Kth element
-        while (count != k and n != None):
+        while (count != k):
             count -= 1
             n = n.next
 
-        if (n != None):
-            return n.data
-        else:
-            pass
+        return n.data
 
     def deleteMiddleNode(self):
         # Two pointers
