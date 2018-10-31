@@ -10,7 +10,10 @@ Conferences, Meetings & Seminars
 https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/Conferences%2C%20Meetings%20and%20Seminars%22)%20)%20&skinName=list-json&count=240
 
 Exhibitions:
-https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href=%22/public/.bedework/categories/Exhibitions%22)%20)%20&skinName=list-json&count=240
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/Exhibitions%22)%20)%20&skinName=list-json&count=240
 
 Festivals:
 https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/Festivals%22)%20)%20&skinName=list-json&count=240
+
+Ongoing:
+https://calendar-dev.yale.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=%20((categories.href=%22/public/.bedework/categories/.cipe%22)%20%20and%20%20(categories.href!=%22/public/.bedework/categories/_Ongoing%22)%20)%20&skinName=list-json&count=240
