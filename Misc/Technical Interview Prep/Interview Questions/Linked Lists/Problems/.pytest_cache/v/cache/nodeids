@@ -1,0 +1,5 @@
+[
+  "test_list.py::test_node_attributes",
+  "test_list.py::test_list_attributes",
+  "test_list.py::test_list_methods"
+]
