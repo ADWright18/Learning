@@ -140,4 +140,8 @@ functionality
 </audio>
 ```
 
-##
+## Improve Chart Accessibility with the Figure Element
+* HTML5 introduced the ```figure``` element, along with the related ```figcaption```.
+* Used together, these items wrap a visual representation (like an image,
+diagram, or chart) along with its caption
+*
