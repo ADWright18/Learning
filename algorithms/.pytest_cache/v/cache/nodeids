@@ -1,0 +1,6 @@
+[
+  "tests/test_array.py::test_is_unique",
+  "tests/test_array.py::test_check_permutation",
+  "tests/test_array.py::test_urlify",
+  "tests/test_array.py::test_is_palindrome_permutation"
+]
