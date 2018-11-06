@@ -2,7 +2,8 @@ from algorithms.arrays import (
     is_unique,
     check_permutation,
     urlify,
-    is_palindrome_permutation
+    is_palindrome_permutation,
+    is_one_away,
     )
 
 import pytest
@@ -42,3 +43,20 @@ def test_is_palindrome_permutation():
 
     s = " "
     assert is_palindrome_permutation(s) == True
+
+def test_is_one_away():
+    s1 = "pale"
+    s2 = "ple"
+    assert is_one_away(s1, s2) == True
+
+    s1 = "pales"
+    s2 = "pale"
+    assert is_one_away(s1, s2) == True
+
+    s1 = "pale"
+    s2 = "bale"
+    assert is_one_away(s1, s2) == True
+
+    s1 = "pale"
+    s2 = "bake"
+    assert is_one_away(s1, s2) == False

@@ -144,4 +144,14 @@ functionality
 * HTML5 introduced the ```figure``` element, along with the related ```figcaption```.
 * Used together, these items wrap a visual representation (like an image,
 diagram, or chart) along with its caption
-*
+* Example:
+
+```html
+<figure>
+  <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
+  <br>
+  <figcaption>
+    Master Camper Cat demonstrates proper form of a roundhouse kick.
+  </figcaption>
+</figure>
+```
