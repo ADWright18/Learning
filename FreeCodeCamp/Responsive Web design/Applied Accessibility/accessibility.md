@@ -155,3 +155,19 @@ diagram, or chart) along with its caption
   </figcaption>
 </figure>
 ```
+
+## Improve Form Field Accessibility with the label Element
+* The ```label``` tag wraps the text for a specific form control item, usually
+the name or label for a choice.
+* The ```for``` attribute on a ```label``` tag explicitly associates that ```label```
+wit the form control and is used by screen readers.
+* Example:
+
+```html
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+</form>
+```
+
+## Wrap Radio Buttons in a fieldset Element for Better Accessibility
