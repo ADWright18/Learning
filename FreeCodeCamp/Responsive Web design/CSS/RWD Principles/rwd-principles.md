@@ -49,7 +49,20 @@ as only half of what the original file is.
 ```html
 <style>
   img {
-    height
+    height: 250px;
+    width: 250px;
   }
 </style>
+<img src="coolPic500x500" alt="A most excellent picture">
 ```
+
+## Make Typography Responsive
+* Instead of using ```em``` or ```px``` to size text, you can use viewport units
+for responsive typography.
+* Viewport units, like percentages, are relative units, but they are based off
+different items
+* Four different viewport units are:
+  * ```vw: 10vw``` would be 10% of the viewport's width
+  * ```vh: 3vh``` would be 3% of the viewport's height
+  * ```vmin: 70vmin``` would be 70% of the viewport's smaller dimension
+  * ```vmax: 100vmax``` would be 100% of the viewport's bigger dimension
