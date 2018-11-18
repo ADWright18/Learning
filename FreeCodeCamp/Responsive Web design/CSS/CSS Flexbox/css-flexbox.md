@@ -18,3 +18,25 @@ other properties to build a responsive page.
 ## Use the flex-direction Property to Make a Row
 * Adding ```display: flex``` to an element turns it into a flex container. This
 makes it possible to align any children of that element into rows or columns.
+* Other options for ```flex-direction``` are row-reversed and colun-reverse.
+* Example:
+
+```css
+#box-container {
+  display: flex;
+  height: 500px;
+  flex-direction: row;
+}
+```
+
+## Use the flex-direction Property to Make a Column
+* You can also create columns using ```flex-direction: columns```
+* Example:
+
+```css
+#box-container {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+}
+```
