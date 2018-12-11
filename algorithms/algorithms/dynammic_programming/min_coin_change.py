@@ -29,14 +29,15 @@ def min_coin_change(coins, target):
     for i in range(1, len(table)):
         table[i] = sys.maxsize
 
-    # Bottom-up DP
+    # Bottom-up DP: Find the minimum number of coins for
+    # values less than the target
     for i in range(1, target + 1):
         for j in range(0, len(coins)):
             if (coins[j] <= i):
                 sub_result = table[i - coins[j]]
 
-            # Check for INT_MAX to avoid overflow and see if
-            # results can be minimized
+                # Check for INT_MAX to avoid overflow and see if
+                # results can be minimized
                 if (sub_result != sys.maxsize and sub_result + 1 < table[i]):
                     table[i] = sub_result + 1
 
